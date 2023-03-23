@@ -1,0 +1,8 @@
+# 自分の開発環境用
+.DS_Store
+.vscode
+
+# Next.jsの副産物
+.next
+node_modules
+extensions/dist

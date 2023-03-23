@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Garuchu Extension",
+  "description": "Post schedule on Garoon to Discord",
+  "author": "uniurchin",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Garuchu Extension",
+    "default_popup": "./dist/index.html",
+    "default_icon": "images/icon128.png"
+  },
+  "icons": {
+    "128": "images/icon128.png"
+  }
+}

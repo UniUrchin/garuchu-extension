@@ -1,0 +1,16 @@
+{
+  "name": "garuchu-extension",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "export": "next build && next export -o extensions/dist"
+  },
+  "dependencies": {
+    "next": "^13.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
