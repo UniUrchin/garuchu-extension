@@ -5,4 +5,4 @@
 # Next.jsの副産物
 .next
 node_modules
-extensions/dist
+extension/dist
