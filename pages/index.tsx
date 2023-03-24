@@ -1,3 +1,12 @@
-import React from 'react'
+import { NextPage } from "next";
 
-export default () => <div>Hello, World!</div>
+const IndexPage: NextPage = () => {
+  return (
+    <div>
+      <h1>つよつよポップアップ建設予定地</h1>
+      <div>Discordに投稿</div>
+    </div>
+  );
+};
+
+export default IndexPage;
