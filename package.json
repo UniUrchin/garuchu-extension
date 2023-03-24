@@ -1,12 +1,12 @@
 {
   "name": "garuchu-extension",
   "version": "1.0.0",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "dev": "next",
     "start": "next start",
     "build": "next build",
-    "export": "next build && next export -o extension/dist"
+    "export": "next build && next export && mv ./out/_next ./out/next && cd ./out && grep -rli '_next' * | xargs -I@ sed -i '' 's|/_next|/next|g' @;"
   },
   "dependencies": {
     "next": "^13.2.4",
