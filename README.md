@@ -8,6 +8,15 @@ GaroonのスケジュールをDiscord Webhookを通して投稿する擬似チ�
 
 使いたい企業のGaroonがSAML認証でAPIも使えない環境下でなければ実用性はありませんが、Next.js with TypeScriptとかTailwind CSSを使っているのでプロジェクト構造くらいは参考になるかもしれません。
 
+## Requirement
+
+- Node 16(Gallium)
+- Next 13
+- React 18
+- TypeScript 5
+- TailWind CSS v3
+- Chrome Extension Manifest v3
+
 ## How to Build & Export
 
 - ローカルでNext.jsの開発環境を立ち上げる
@@ -22,7 +31,7 @@ GaroonのスケジュールをDiscord Webhookを通して投稿する擬似チ�
   $ yarn build & yarn start
   ```
 
-- Chrome拡張として読み込ませるためのフォルダをエクスポートする
+- Chrome拡張として読み込ませるための`out`ディレクトリをエクスポートする
 
   ```
   $ yarn export
