@@ -2,7 +2,7 @@ import { NextPage } from "next";
 
 const IndexPage: NextPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="w-80 h-80 flex flex-col justify-center items-center">
       <h1 className="font-semibold mx-4 my-2">
         つよつよポップアップ建設予定地!!
       </h1>
