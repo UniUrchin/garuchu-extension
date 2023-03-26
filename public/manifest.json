@@ -12,10 +12,9 @@
   "icons": {
     "128": "icons/icon128.png"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://onlinedemo2.cybozu.info/*"],
-      "js": ["scripts/makeMessage.js"]
-    }
+  "permissions": [
+    "tabs", 
+    "scripting", 
+    "activeTab"
   ]
 }

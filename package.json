@@ -9,6 +9,7 @@
     "export": "next build && next export && mv ./out/_next ./out/next && cd ./out && grep -rli '_next' * | xargs -I@ sed -i '' 's|/_next|/next|g' @;"
   },
   "dependencies": {
+    "@types/chrome": "^0.0.225",
     "@types/node": "^18.15.6",
     "@types/react": "^18.0.28",
     "autoprefixer": "^10.4.14",
