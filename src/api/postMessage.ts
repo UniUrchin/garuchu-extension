@@ -1,5 +1,4 @@
 import axios from "axios";
-import { scheduler } from "timers/promises";
 
 export async function postMessage() {
   const WEBHOOK_URL = process.env.NEXT_PUBLIC_WEBHOOK_URL;

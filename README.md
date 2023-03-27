@@ -6,7 +6,7 @@
 
 GaroonのスケジュールをDiscord Webhookを通して投稿する擬似チャットボットのようなChrome拡張です。
 
-使いたい企業のGaroonがSAML認証でAPIも使えない環境下でなければ実用性はありませんが、Next.js with TypeScriptとかTailwind CSSを使っているのでプロジェクト構造くらいは参考になるかもしれません。
+まだまだ未完成なので、あんまり見ないでください。
 
 ## Requirement
 
