@@ -1,9 +1,10 @@
 import axios from "axios";
-
-const baseURL = "https://discord.com/api/webhooks/???";
+import { scheduler } from "timers/promises";
 
 export async function postMessage() {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  const WEBHOOK_URL = process.env.NEXT_PUBLIC_WEBHOOK_URL;
+
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   chrome.scripting
     .executeScript({
       target: { tabId: tab.id },
@@ -11,16 +12,15 @@ export async function postMessage() {
     })
     .then((injectionResults) => {
       for (const { result: message } of injectionResults) {
-        console.log(message);
-        axios.post(baseURL, {
+        axios.post(WEBHOOK_URL, {
           content: message,
         });
       }
     });
 }
 
-function getMessage() {
-  const TITLE = "今日のスケジュールをお知らせするよ!!";
+function getMessage(): string {
+  const TITLE = process.env.NEXT_PUBLIC_TITLE;
   const DECORATION = "-".repeat(TITLE.length * 2);
 
   const todaysScheduleList = Array.from(
@@ -35,6 +35,7 @@ function getMessage() {
       ? todaysScheduleList
           .map((schedule) => {
             let eventTime = schedule.querySelector(".listTime a").textContent;
+            // TODO: 最後にimgが入る例を確認したので、lastChildは使えない
             let eventName = schedule.querySelector(".groupWeekEventTitle a")
               .lastChild.textContent;
             return `${eventTime}: ${eventName}`;

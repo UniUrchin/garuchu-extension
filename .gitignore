@@ -1,6 +1,7 @@
 # 自分の開発環境用
 .DS_Store
 .vscode
+.env.local
 
 # Next.jsの副産物
 .next
