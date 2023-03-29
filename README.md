@@ -19,6 +19,12 @@ GaroonのスケジュールをDiscord Webhookを通して投稿する擬似チ�
 
 ## How to Build & Export
 
+- 必要パッケージをローカルにインストール
+
+  ```
+  yarn install
+  ```
+
 - ローカルでNext.jsの開発環境を立ち上げる
 
   ```
@@ -31,7 +37,7 @@ GaroonのスケジュールをDiscord Webhookを通して投稿する擬似チ�
   $ yarn build & yarn start
   ```
 
-- Chrome拡張として読み込ませるための`out`ディレクトリをエクスポートする
+- Chrome拡張として読み込ませるための`out`ディレクトリを出力する
 
   ```
   $ yarn export
