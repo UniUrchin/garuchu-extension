@@ -11,9 +11,9 @@ export async function postMessage() {
     })
     .then((injectionResults) => {
       for (const { result: message } of injectionResults) {
-        axios.post(WEBHOOK_URL, {
-          content: message,
-        });
+        // axios.post(WEBHOOK_URL, {
+        //   content: message,
+        // });
       }
     });
 }
@@ -34,9 +34,9 @@ function getMessage(): string {
       ? todaysScheduleList
           .map((schedule) => {
             let eventTime = schedule.querySelector(".listTime a").textContent;
-            // TODO: 最後にimgが入る例を確認したので、lastChildは使えない
-            let eventName = schedule.querySelector(".groupWeekEventTitle a")
-              .lastChild.textContent;
+            let [_eventTag, eventName] = Array.from(
+              schedule.querySelector(".groupWeekEventTitle a").childNodes
+            ).map((node) => node.textContent);
             return `${eventTime}: ${eventName}`;
           })
           .join("\n")
